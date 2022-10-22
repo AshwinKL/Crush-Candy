@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import GameScreen from "./pages/GameScreen";
+import Login from "./pages/Login";
+import useSound from "use-sound";
+import bg from "./assets/bg.mp3";
 
 function App() {
+  const [bgSound, { sound, stop }] = useSound(bg, {
+    volume: 0.5,
+    interrupt: true,
+  });
+  const [userName, setUserName] = useState("");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Login userName={userName} setUserName={setUserName} stop={stop} />
+          }
+        />
+        <Route
+          path="/game"
+          element={
+            <GameScreen
+              userName={userName}
+              bgSound={bgSound}
+              stop={stop}
+              sound={sound}
+              setUserName={setUserName}
+            />
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

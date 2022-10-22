@@ -1,0 +1,80 @@
+.card {
+  width: 70%;
+  height: 70%;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-align: center;
+}
+.card h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.h3Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.96;
+  border-radius: 20px;
+  padding: 1rem;
+  width: 80%;
+  background-color: rgba(0, 170, 237, 0.826);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.card input {
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  padding: 1rem 4rem;
+  outline: 0;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 20px;
+}
+.buttons {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .card h3 {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 787px) {
+  .card h3 {
+    font-size: 2rem;
+  }
+  .h3Container {
+    width: 100%;
+    border-radius: 0;
+  }
+  .card input {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .buttons {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .card h3 {
+    font-size: 1.2rem;
+  }
+  .card input {
+    border-radius: 0;
+    font-size: 0.6rem;
+    padding: 1rem 2rem;
+  }
+}

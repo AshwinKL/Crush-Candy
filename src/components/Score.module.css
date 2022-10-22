@@ -1,0 +1,54 @@
+.scores {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  margin-bottom: 0.5rem;
+  background-color: #e64848;
+  border: none;
+  border-radius: 20px;
+}
+.score-container {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.score-container h4,
+span {
+  color: #fff;
+}
+
+@media only screen and (max-width: 1000px) {
+  .scores {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .scores {
+    width: 70%;
+  }
+  .score-container h4,
+  span {
+    font-size: small;
+  }
+}
+@media only screen and (max-width: 725px) {
+  .scores {
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 2rem;
+  }
+  .score-container h4,
+  span {
+    font-size: small;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .score-container h4,
+  span {
+    font-size: x-small;
+  }
+}
