@@ -1,7 +1,9 @@
 export const DragStart = (e, setSquareBeingDragged) => {
+  console.log(e.target);
   setSquareBeingDragged(e.target);
 };
 export const DragDrop = (e, setSquareBeingReplaced) => {
+  console.log(e.target);
   setSquareBeingReplaced(e.target);
 };
 export const DragEnd = (
@@ -11,6 +13,7 @@ export const DragEnd = (
   currentColorArrangement,
   width
 ) => {
+  console.log(e.target);
   const squareBeingDraggedId = parseInt(
     squareBeingDragged.getAttribute("data-id")
   );

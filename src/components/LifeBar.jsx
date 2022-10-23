@@ -20,12 +20,12 @@ const LifeBar = ({ setGameOver, setTotalLife, totalLife, pause, score }) => {
     return () => clearInterval(timer);
   }, [setTotalLife]);
 
-  useEffect(() => {
-    if (totalLife <= 0) {
-      pause();
-      setGameOver(true);
-    }
-  }, [totalLife, setGameOver, pause]);
+  // useEffect(() => {
+  //   if (totalLife <= 0) {
+  //     pause();
+  //     setGameOver(true);
+  //   }
+  // }, [totalLife, setGameOver, pause]);
   let styler = { height: `${totalLife}%` };
   if (window.innerWidth <= 725) {
     styler = { width: `${totalLife}%` };

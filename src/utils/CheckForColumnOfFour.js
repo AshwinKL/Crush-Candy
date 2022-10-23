@@ -26,7 +26,7 @@ export const CheckForColumnOfFour = (
         setTotalLife((prev) => prev + 40);
       } else {
         const limit = 100 - totalLife;
-        setTotalLife((prev) => prev + limit - 20);
+        setTotalLife((prev) => prev + limit);
       }
     }
   }

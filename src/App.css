@@ -20,6 +20,7 @@
 .game img {
   width: 12.5%;
   height: 12.5%;
+  touch-action: none;
 }
 
 .sidebar {
