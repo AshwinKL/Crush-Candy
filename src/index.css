@@ -10,7 +10,7 @@ body {
   object-fit: contain;
   font-family: "Orbitron", sans-serif;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  height: 100vh;
   min-height: -webkit-fill-available;
 }
 html {
